@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>IndianFlag.png</file>
+    </qresource>
+</RCC>
