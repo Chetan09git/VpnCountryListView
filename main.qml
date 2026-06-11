@@ -10,12 +10,12 @@ Window {
     title: qsTr("SecureVPN Country Selection")
     color: "#0f172a"
 
-    // ListViewApplicationComponent {
-    //     anchors.fill: parent
-    // }
-    ListViewComponent{
-
+    ListViewApplicationComponent {
+        // anchors.fill: parent
     }
+    // ListViewComponent{
+
+    // }
 
 }
 // ListView {

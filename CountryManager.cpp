@@ -48,7 +48,7 @@ void CountryManager::countryInitializer()
     addCountry("India", 91);
     addCountry("United States", 1);
     addCountry("United Kingdom", 44);
-    addCountry("Canada", 1);
+    addCountry("Canada", 11);
     addCountry("Australia", 61);
     addCountry("Germany", 49);
     addCountry("France", 33);
@@ -65,12 +65,11 @@ void CountryManager::countryInitializer()
     addCountry("Sweden", 46);
     addCountry("Norway", 47);
     addCountry("South Africa", 27);
-    // Country *country = m_countryList.value("India");
-    // country->addCity("Bengalore",11);
-    // country->addCity("mumbai",12);
-    // country = m_countryList.value("United States");
-    // country->addCity("addCity",21);
-    // country->addCity("California",22);
+    Country *country = m_countryList.value(91);
+    country->addCity("Bengalore",11);
+    country->addCity("mumbai",12);
+    country = m_countryList.value(1);
+    country->addCity("California",22);
     QTimer::singleShot(10000, this, [this]() {
         addCountry("Ch", 19);
     });

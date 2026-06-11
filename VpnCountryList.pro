@@ -10,6 +10,7 @@ SOURCES += \
 
 resources.files = main.qml \
                   ListViewApplicationComponent.qml\
+                  ListViewDeleagateComponent.qml\
                   ListViewComponent.qml
 
 resources.prefix = /$${TARGET}
@@ -36,4 +37,5 @@ HEADERS += \
 
 DISTFILES += \
     ListViewApplicationComponent.qml \
-    ListViewComponent.qml
+    ListViewComponent.qml \
+    ListViewDeleagateComponent.qml
