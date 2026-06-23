@@ -12,7 +12,6 @@ class CountryManager : public QObject
 public:
 
     QMap<int, Country *> getCountryList() const;
-    void addCity(QString countryName, QString cityName, int cityIp);
 
     static CountryManager *init();
 

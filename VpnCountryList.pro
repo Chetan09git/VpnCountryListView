@@ -5,13 +5,18 @@ SOURCES += \
         Country.cpp \
         CountryManagementViewModel.cpp \
         CountryManager.cpp \
+        JsonFileManager.cpp \
         SortFiltterModule.cpp \
         main.cpp
 
 resources.files = main.qml \
                   ListViewApplicationComponent.qml\
                   ListViewDeleagateComponent.qml\
-                  ListViewComponent.qml
+                  BorderComponent.qml \
+                  CountryListComponent.qml \
+                  SerachComponent.qml \
+                  HeaderComponent.qml \
+                  CustomImage.qml
 
 resources.prefix = /$${TARGET}
 RESOURCES += resources \
@@ -33,9 +38,15 @@ HEADERS += \
     Country.h \
     CountryManagementViewModel.h \
     CountryManager.h \
+    FileManager.h \
+    JsonFileManager.h \
     SortFiltterModule.h
 
 DISTFILES += \
+    BorderComponent.qml \
+    CountryListComponent.qml \
+    CustomImage.qml \
+    HeaderComponent.qml \
     ListViewApplicationComponent.qml \
-    ListViewComponent.qml \
-    ListViewDeleagateComponent.qml
+    ListViewDeleagateComponent.qml \
+    SerachComponent.qml

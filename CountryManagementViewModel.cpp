@@ -2,14 +2,31 @@
 #include "CountryManager.h"
 #include "Country.h"
 #include "City.h"
+#include "JsonFileManager.h"
 #include <QStringList>
 
+// CountryManagementViewModel::CountryManagementViewModel(QObject *parent)
+//     : QAbstractListModel(parent)
+// {
+//     m_countryManager = CountryManager::init();
+//     connect(m_countryManager, &CountryManager::countryAdded,
+//             this, &CountryManagementViewModel::handleCountryAdded);
+// }
 CountryManagementViewModel::CountryManagementViewModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     m_countryManager = CountryManager::init();
-    connect(m_countryManager, &CountryManager::countryAdded,
-            this, &CountryManagementViewModel::handleCountryAdded);
+    m_fileManager = new JsonFileManager;
+    m_fileManager->readJson( "CountryData.json", m_countryManager);
+    // JsonFileManager::writeJson(
+    //     "CountryData.json",
+    //     m_countryManager);
+    // JsonFileManager::readJson( "CountryData.json", m_countryManager);
+
+    connect(m_countryManager,
+            &CountryManager::countryAdded,
+            this,
+            &CountryManagementViewModel::handleCountryAdded);
 }
 
 int CountryManagementViewModel::rowCount(const QModelIndex &parent) const

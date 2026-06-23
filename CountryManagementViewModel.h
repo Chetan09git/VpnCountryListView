@@ -1,6 +1,7 @@
 #ifndef COUNTRYMANAGEMENTVIEWMODEL_H
 #define COUNTRYMANAGEMENTVIEWMODEL_H
 
+#include "FileManager.h"
 #include <QAbstractListModel>
 #include <QList>
 
@@ -29,6 +30,7 @@ private slots:
 
 private:
     CountryManager *m_countryManager;
+    FileManager *m_fileManager;
 };
 
 #endif // COUNTRYMANAGEMENTVIEWMODEL_H

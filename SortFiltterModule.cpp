@@ -5,6 +5,8 @@ SortFiltterModule::SortFiltterModule(QObject *parent)
 {
     setFilterRole(1);
     setSortRole(1);
+    // setFilterRole(3);
+    // setSortRole(3);
     sort(0, Qt::AscendingOrder);
 }
 

@@ -3,7 +3,6 @@ import QtQuick.Layouts
 
 Column{
     width: listView.width
-    leftPadding: 10
     property bool expanded: false
 
     Rectangle{
@@ -11,28 +10,32 @@ Column{
         width: parent.width
         height: 50
         color: "#1A1240"
-        Rectangle{width: parent.width *0.96;height: 1;color: "silver"; anchors.bottom: dataRect.bottom}
+
+        BorderComponent{
+            width: parent.width *0.9
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
 
         RowLayout {
             anchors.verticalCenter: parent.verticalCenter
+            Item {id: name;width: 10;height: 1}
             Item{
                 Layout.preferredWidth: parent.height + parent.width * 0.01
                 Layout.preferredHeight: parent.height * 0.6
-            Image {
-                id:arrowBtn
-                anchors.fill: parent
+                CustomImage {
+                    imageSource: "qrc:/Png/angle-small-down.png"
+                    visible: cities.length > 0
+                    MouseArea { anchors.fill: parent; onClicked: expanded = !expanded }
+                }
 
-                visible: cities.length > 0
-                source: "qrc:/down-chevron.png"
-                MouseArea { anchors.fill: parent; onClicked: expanded = !expanded }
             }
-            }
-            Image{
-               Layout.preferredWidth: parent.parent.width * 0.1
-                Layout.preferredHeight:  parent.height
+            CustomImage{
                 source: "qrc:/IndianFlag.png"
-                fillMode: Image.PreserveAspectFit
+                Layout.preferredWidth: parent.parent.width * 0.1
+                Layout.preferredHeight:  parent.height
             }
+
             Text {
                 text: countryName
                 color: "white"
@@ -59,6 +62,11 @@ Column{
             width: parent.width
             height: 50
             color: "#2a1c50"
+
+            BorderComponent{
+                width: parent.width *0.9
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
 
             Text {
                 anchors.centerIn: parent
