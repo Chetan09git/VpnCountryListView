@@ -5,12 +5,15 @@ SortFiltterModule::SortFiltterModule(QObject *parent)
 {
     setFilterRole(1);
     setSortRole(1);
-    // setFilterRole(3);
-    // setSortRole(3);
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
     sort(0, Qt::AscendingOrder);
 }
 
 void SortFiltterModule::setFilterString(const QString &filter)
 {
+
     setFilterFixedString(filter);
+
 }
+
+

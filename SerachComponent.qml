@@ -4,13 +4,12 @@ import QtQuick.Controls
 TextField {
     id: searchInput
     leftPadding: 45
-
+    verticalAlignment: Text.AlignVCenter
     background: Rectangle {
         radius: 15
         color: "#3B2A6B"
 
         Image {
-            // width: 20
             width: parent.width * 0.08
             height: width
             anchors.left: parent.left

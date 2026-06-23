@@ -14,6 +14,7 @@ resources.files = main.qml \
                   ListViewDeleagateComponent.qml\
                   BorderComponent.qml \
                   CountryListComponent.qml \
+                  CitiesListComponent.qml \
                   SerachComponent.qml \
                   HeaderComponent.qml \
                   CustomImage.qml
@@ -44,6 +45,7 @@ HEADERS += \
 
 DISTFILES += \
     BorderComponent.qml \
+    CitiesListComponent.qml \
     CountryListComponent.qml \
     CustomImage.qml \
     HeaderComponent.qml \

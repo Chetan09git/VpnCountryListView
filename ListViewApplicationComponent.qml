@@ -1,25 +1,15 @@
-import QtQuick
-import QtQuick.Controls.Basic
+import QtQuick.Layouts
 
-Rectangle {
+ColumnLayout {
     anchors.fill: parent
-    color: "#1A1240"
-    HeaderComponent{
-        id: searchField
-    }
-    CountryListComponent{
 
-        anchors.top: searchField.bottom
+    HeaderComponent {
+        Layout.fillWidth: true
+        Layout.preferredHeight: 60
     }
 
-    // ListView {
-    //     anchors.left: parent.left
-    //     clip: true
-    //     anchors.right: parent.right
-    //     anchors.bottom: parent.bottom
-
-    //     model: countryModel
-
-    //     delegate: ListViewDeleagateComponent {}
-    // }
+    CountryListComponent {
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+    }
 }
